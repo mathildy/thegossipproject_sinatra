@@ -5,9 +5,9 @@
   <body>
     <h1>Mon super site de gossip, depuis le dossier views !</h1>
     <p>Clique <a href="/gossips/new">ici</a> pour créer un potin ;)</p>
-    <p>Quel potin veux-tu afficher ? Clique sur son numéro !</p>
+    <h3>Quel potin veux-tu afficher ? Clique sur son numéro !</h3>
         <% gossips.each_with_index do |gossip,index| %>
-        <p>    potin <a href="/gossips/<%= index %>/"> n°<%= index %></a>  déposé par <%= gossip.author %> </p>
+        <p>Potin <a href="/gossips/<%= index %>/"> n°<%= index %></a> par <i><%= gossip.author %></i>, la grosse balance </p>
       <% end %>
   </body>
 </html> 
