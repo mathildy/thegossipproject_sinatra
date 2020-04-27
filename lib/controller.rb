@@ -18,10 +18,6 @@ class ApplicationController < Sinatra::Base
     ##Gossip.new.save
     Gossip.new(params["gossip_author"], params["gossip_content"]).save
     redirect '/'
-  
-    #puts "Ceci est le contenu du hash params : #{params}"
-    #puts "Trop bien ! Et ceci est ce que l'utilisateur a passé dans le champ gossip_author : #{params["gossip_author"]}"
-    #puts "De la bombe, et du coup ça, ça doit être ce que l'utilisateur a passé dans le champ gossip_content : #{params["gossip_content"]}"
   end
 
   get '/gossips/:id/' do
